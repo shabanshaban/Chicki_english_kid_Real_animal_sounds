@@ -19,8 +19,9 @@ const val PACKAGE_NAME_MYKET = "ir.mservices.market"
 const val PACKAGE_NAME_GALAXY = "com.sec.android.app.samsungapps"
 const val APP_VERSION = BuildConfig.VERSION_CODE.toString()
 
-const val BANNER_STANDARD_ID         = "ca-app-pub-6201798499291567/1835796625"
- const val BANNER_FULL_SCREEN        = "ca-app-pub-6201798499291567/4090925884"
+const val BANNER_STANDARD_ID         = "ca-app-pub-6201798499291567/6985247186"
+
+ const val BANNER_FULL_SCREEN        = "ca-app-pub-6201798499291567/1990220546"
 
 const val SIZE_ITEM = 57
 

@@ -10,8 +10,8 @@ import com.farad.entertainment.kidsanimalenglish.data.apiService.ApiService
 import com.farad.entertainment.kidsanimalenglish.data.model.DataDialog
 import com.farad.entertainment.kidsanimalenglish.databinding.FragmentMainSoundBinding
 import com.farad.entertainment.kidsanimalenglish.kids_ringtone_english.DataMainModel
-import com.farad.entertainment.kidsanimalenglish.kids_ringtone_english.getListData
 import com.farad.entertainment.kidsanimalenglish.kids_ringtone_english.DialogClose
+import com.farad.entertainment.kidsanimalenglish.kids_ringtone_english.getListData
 import com.farad.entertainment.kidsanimalenglish.utils.checkLanguage
 import com.farad.entertainment.kidsanimalenglish.utils.playSoundMediaPlayer
 import com.farad.entertainment.kidsanimalenglish.utils.safeShow
@@ -28,6 +28,7 @@ class MainFragmentRingTone : BottomNavigationFragment<FragmentMainSoundBinding>(
     private var storyAdapter = AnimalAdapter()
     private val apiService: ApiService by inject()
     private var countClickItem = 0
+    private var serRequest = false
 
     //data dialog exit
     private var dataDialog: DataDialog? = null
@@ -124,9 +125,13 @@ class MainFragmentRingTone : BottomNavigationFragment<FragmentMainSoundBinding>(
 
                 countClickItem++
 
-                if (countClickItem >= 5) {
-                    getMainActivity()?.showBannerFull()
+                if (countClickItem >= 7 && serRequest.not()) {
+                    getMainActivity()?.showBannerFull {
+                        serRequest = false
+                    }
                     countClickItem = 0
+                    serRequest = true
+
                 }
                 mediaPlayer?.playSoundMediaPlayer(context, it.soundPlay, 3)
 
@@ -138,7 +143,7 @@ class MainFragmentRingTone : BottomNavigationFragment<FragmentMainSoundBinding>(
     private fun listener() {
 
         binding.btnChicki.setOnSafeClickListener {
-            
+
             val navigate = MainFragmentRingToneDirections.actionMainFragmentRingToneToMainFragment()
             navigate(navigate)
         }

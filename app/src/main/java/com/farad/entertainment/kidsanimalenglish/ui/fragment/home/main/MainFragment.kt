@@ -104,9 +104,9 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
     }
 
     override fun setup() {
-      context?.getListData()?.let {
+        context?.getListData()?.let {
 
-            if (listItemAnimal.isEmpty()){
+            if (listItemAnimal.isEmpty()) {
                 listItemAnimal.clear()
                 listItemAnimal.addAll(it)
             }
@@ -131,73 +131,12 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
 
 
         dialogOpenItem()
-      //  showRewardedAd()
-     //   loadAd()
+        //  showRewardedAd()
+        //   loadAd()
 
     }
-    private fun loadAd() {
-        RewardedInterstitialAd.load(requireContext(), "ca-app-pub-3940256099942544/5354046379",
-            AdRequest.Builder().build(), object : RewardedInterstitialAdLoadCallback() {
-                override fun onAdLoaded(ad: RewardedInterstitialAd) {
-                  toast("onAdLoaded")
-                }
 
-                override fun onAdFailedToLoad(adError: LoadAdError) {
-                     toast("onAdFailedToLoad")
-                }
-            })
-    }
-    private fun showRewardedAd() {
-        var rewardedAd: RewardedAd? = null
-        val adRequest = AdRequest.Builder().build()
 
-        RewardedAd.load(
-            requireContext(),
-            "ca-app-pub-3940256099942544/5354046379",
-            adRequest,
-            object : RewardedAdLoadCallback() {
-                override fun onAdFailedToLoad(adError: LoadAdError) {
-                    rewardedAd = null
-                  //  toast("onAdFailedToLoad"+adError.message)
-                }
-
-                override fun onAdLoaded(ad: RewardedAd) {
-                    rewardedAd = ad
-                }
-            })
-
-        rewardedAd?.fullScreenContentCallback = object: FullScreenContentCallback(){
-            override fun onAdClicked() {
-                super.onAdClicked()
-            }
-
-            override fun onAdDismissedFullScreenContent() {
-                super.onAdDismissedFullScreenContent()
-                toast("onAdDismissedFullScreenContent")
-            }
-
-            override fun onAdFailedToShowFullScreenContent(p0: AdError) {
-                super.onAdFailedToShowFullScreenContent(p0)
-                toast("onAdFailedToShowFullScreenContent")
-            }
-
-            override fun onAdImpression() {
-                super.onAdImpression()
-                toast("onAdImpression")
-            }
-
-            override fun onAdShowedFullScreenContent() {
-                super.onAdShowedFullScreenContent()
-                toast("onAdShowedFullScreenContent")
-            }
-        }
-        activity?.let {
-            rewardedAd?.show(it) {
-                toast("show")
-            }
-        }
-
-    }
 
     private fun dialogOpenItem() {
         if (sharedPreferencesManager.showOpenItem.not()) {
@@ -348,21 +287,21 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
     private fun dialogEnterCodeInvited() {
         val dialog = DialogEnterInviteFriends()
 
-       /* dialog.onSaveNameListener {
-            binding.tvNumberFriends.text = getString(
-                R.string.number_of_invited_friends_s,
-                sharedPreferencesManager.subUserCount
-            )
+        /* dialog.onSaveNameListener {
+             binding.tvNumberFriends.text = getString(
+                 R.string.number_of_invited_friends_s,
+                 sharedPreferencesManager.subUserCount
+             )
 
-            binding.tvCoinm.text = "$" + sharedPreferencesManager.coinCount + " "
-            binding.FrameLayoutAnimationView.visible()
-            binding.animationView.playAnimation()
-            binding.tvCoinm.scaleAnim2()
-            binding.imageCoinm.scaleAnim2()
-            mediaPlayer?.playSoundMediaPlayer(context, R.raw.right_crowd)
+             binding.tvCoinm.text = "$" + sharedPreferencesManager.coinCount + " "
+             binding.FrameLayoutAnimationView.visible()
+             binding.animationView.playAnimation()
+             binding.tvCoinm.scaleAnim2()
+             binding.imageCoinm.scaleAnim2()
+             mediaPlayer?.playSoundMediaPlayer(context, R.raw.right_crowd)
 
 
-        }*/
+         }*/
 
         dialog.safeShow(childFragmentManager)
     }
@@ -419,7 +358,7 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
         binding.tvMenuInviteFriends.setOnSafeClickListener {
             closeDrawer()
 
-           context?.invitedFriend()
+            context?.invitedFriend()
         }
         binding.tvMenuRate.setOnSafeClickListener {
             closeDrawer()
@@ -519,23 +458,23 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
         }
         binding.btnPlayMusic.setOnSafeClickListener {
             it.animClick()
-            val soundPlay = listItemAnimal.filter { m -> m.soundPlay.isNotNull()  }
+            val soundPlay = listItemAnimal.filter { m -> m.soundPlay.isNotNull() }
 
-                if (isPlayMusic) {
-                    binding.btnPlayMusic.setImageResource(R.drawable.icon_play_all)
-                    binding.playerTop.pauseMusic()
-                    binding.linearLayoutCompat5.alpha = 1f
-                    //     binding.recyclerview.updatePadding(top = 56.px)
-                } else {
-                    binding.btnPlayMusic.setImageResource(R.drawable.icon_pause_all)
-                    binding.playerTop.playMusic()
-                    if (isMotionAnimeTop)
-                        binding.linearLayoutCompat5.alpha = 0f
-                    //    binding.recyclerview.updatePadding(top = 96.px)
+            if (isPlayMusic) {
+                binding.btnPlayMusic.setImageResource(R.drawable.icon_play_all)
+                binding.playerTop.pauseMusic()
+                binding.linearLayoutCompat5.alpha = 1f
+                //     binding.recyclerview.updatePadding(top = 56.px)
+            } else {
+                binding.btnPlayMusic.setImageResource(R.drawable.icon_pause_all)
+                binding.playerTop.playMusic()
+                if (isMotionAnimeTop)
+                    binding.linearLayoutCompat5.alpha = 0f
+                //    binding.recyclerview.updatePadding(top = 96.px)
 
-                }
-                binding.playerTop.visibleOrGone(!isPlayMusic, true)
-                isPlayMusic = !isPlayMusic
+            }
+            binding.playerTop.visibleOrGone(!isPlayMusic, true)
+            isPlayMusic = !isPlayMusic
 
 
         }
@@ -550,16 +489,17 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
         dialog.safeShow(childFragmentManager)
     }
 
-    private fun checkBannerFull(){
+    private fun checkBannerFull() {
 
-        if (counterImageClick>=7&&serRequest.not()){
-            counterImageClick=0
-            serRequest=true
+        if (counterImageClick >= 7 && serRequest.not()) {
+            counterImageClick = 0
+            serRequest = true
             getMainActivity()?.showBannerFull {
-                serRequest=false
+                serRequest = false
             }
         }
     }
+
     private fun initRecyclerview() {
 
         binding.recyclerview.adapter = mainAnimalAdapter.apply {
@@ -601,10 +541,9 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
         viewModel.getUserInfoLiveData()?.observe(this) {
 
 
-
             listItem.clear()
-            it?.listItem?.let {
-                it1 -> listItem.addAll(it1)
+            it?.listItem?.let { it1 ->
+                listItem.addAll(it1)
 
 
             }
@@ -614,7 +553,7 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
 
 
 
-            binding.playerTop.initPlayer(listItemAnimal.filter { m -> m.soundPlay.isNotNull()   })
+            binding.playerTop.initPlayer(listItemAnimal.filter { m -> m.soundPlay.isNotNull() })
 
 
             mainAnimalAdapter.submitList(listItemAnimal)
@@ -622,28 +561,6 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
 
     }
 
-    private fun updateServerItem(newList: List<AnimalModel>?) {
-
-        var items=""
-        if (newList?.isNotEmpty() == true){
-            newList.forEachIndexed { index, animalModel ->
-                if (animalModel.isLock.not())
-                items+="${index+1},"
-
-            }
-
-            apiService.updateItem(items){
-                if (it.isNotEmpty()){
-                    lifecycleScope.launch {
-                        viewModel.updateList(it,getAndroidIdUser())
-                            mainAnimalAdapter.notifyDataSetChanged()
-
-                    }
-                    }
-            }
-        }
-
-    }
 
     private fun CircularProgressBar.progressPercentage(size: Int): Float {
 
@@ -653,7 +570,8 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
     private fun clickItemAnimal(model: AnimalModel, position: Int) {
 
         if (sharedPreferencesManager.zoomImageAnimal == ZoomImageAnimal.ZOOM_IN) {
-            val navigate = MainFragmentDirections.actionMainFragmentToDetailsAnimalFragment(position, model)
+            val navigate =
+                MainFragmentDirections.actionMainFragmentToDetailsAnimalFragment(position, model)
             navigate(navigate)
         } else {
 

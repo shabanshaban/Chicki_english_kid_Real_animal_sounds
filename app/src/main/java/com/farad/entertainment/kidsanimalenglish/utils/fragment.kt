@@ -18,6 +18,7 @@ import android.widget.Toast
 import androidx.annotation.ColorRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -111,7 +112,35 @@ fun Fragment.getPermission(action: () -> Unit) {
         action()
     }
 }
+fun AppCompatActivity.statusBarColor(
+    @ColorRes color: Int,
+    isAppearanceLightStatusBars: Boolean = false
+) {
 
+
+    try {
+        val isAfterVanillaIceCream = Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM
+        val insetsController = WindowCompat.getInsetsController(window, window.decorView)
+        insetsController.isAppearanceLightStatusBars = isAppearanceLightStatusBars
+        insetsController.isAppearanceLightNavigationBars = isAppearanceLightStatusBars
+
+        if (isAfterVanillaIceCream) {
+            window?.decorView?.setOnApplyWindowInsetsListener { view, insets ->
+                view.setBackgroundColor(getColorCompat(color))
+                insets
+            }
+        } else {
+            @Suppress("DEPRECATION")
+            window.statusBarColor = getColorCompat(color)
+            //  @Suppress("DEPRECATION")
+            //   window.navigationBarColor = getColorCompat(statusBarColor)
+        }
+    }catch (e:Exception){
+        e.fillInStackTrace()
+    }
+
+
+}
 fun Activity.statusBarColor(@ColorRes color: Int) {
     /*   window.statusBarColor = ContextCompat.getColor(this, color)*/
 }

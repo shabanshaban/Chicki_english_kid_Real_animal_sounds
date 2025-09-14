@@ -23,6 +23,7 @@ import com.farad.entertainment.kidsanimalenglish.utils.lifecycleScopeDelayTryCat
 import com.farad.entertainment.kidsanimalenglish.utils.safeShow
 import com.farad.entertainment.kidsanimalenglish.utils.setBackGround
 import com.farad.entertainment.kidsanimalenglish.utils.sinaLog
+import com.farad.entertainment.kidsanimalenglish.utils.statusBarColor
 import com.farad.entertainment.kidsanimalenglish.utils.visibleOrGone
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdRequest
@@ -82,6 +83,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), MainNavigator {
         delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_NO
         initBanner()
         signUser()
+        statusBarColor(R.color.orange_dark, false)
 
 
 

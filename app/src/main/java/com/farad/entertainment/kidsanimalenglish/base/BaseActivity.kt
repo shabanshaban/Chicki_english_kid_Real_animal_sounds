@@ -14,7 +14,6 @@ import com.farad.entertainment.kidsanimalenglish.data.manager.DialogManager
 import com.farad.entertainment.kidsanimalenglish.data.manager.NavigationManager
 import com.farad.entertainment.kidsanimalenglish.data.manager.SharedPreferencesManager
 import com.farad.entertainment.kidsanimalenglish.utils.checkLanguage
-import com.farad.entertainment.kidsanimalenglish.utils.removeStatusBar
 import com.farad.entertainment.kidsanimalenglish.utils.setLocaleApp
 import org.koin.android.ext.android.inject
 import java.util.Locale
@@ -72,7 +71,6 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), ViewCreated
         initMessageManager()
         initBackPressListener()
         afterCreateView()
-        removeStatusBar()
 
 
     }
