@@ -24,36 +24,37 @@ data class OrigamiParkModel(
 )
 
 fun OrigamiParkFragment.getOrigamiParkList(): ArrayList<OrigamiParkModel> {
+
     return arrayListOf(
         OrigamiParkModel(
             ListOrigamiParkEnum.PARK_ANIMAL,
             R.drawable.video_origami_pic_1,
             size = SizeTypeTools.SMALL,
-            urlVideo = "Tgn6lKyMBck"
+            urlVideo = "https://s1.uupload.ir/files/mrghooghooli/mrghooghooli/video_origami_introduce/video_origami_introduce_"+1+".mp4"
         ),
         OrigamiParkModel(
             ListOrigamiParkEnum.FISH_LAKE,
             R.drawable.video_origami_pic_2,
             size = SizeTypeTools.SMALL,
-            urlVideo = "mK1stA4KMFc"
+            urlVideo = "https://s1.uupload.ir/files/mrghooghooli/mrghooghooli/video_origami_introduce/video_origami_introduce_"+ 2 +".mp4"
         ),
         OrigamiParkModel(
             ListOrigamiParkEnum.ANIMAL_MOUNTAIN,
             R.drawable.video_origami_pic_3,
             size = SizeTypeTools.SMALL,
-            urlVideo = "e66eV37LzPM"
+            urlVideo = "https://s1.uupload.ir/files/mrghooghooli/mrghooghooli/video_origami_introduce/video_origami_introduce_"+ 3 +".mp4"
         ),
         OrigamiParkModel(
             ListOrigamiParkEnum.VIDEO_1,
             R.drawable.video_origami_pic_4,
             size = SizeTypeTools.NORMAL,
-            urlVideo = "OUW9p4B73O8"
+            urlVideo = "https://s1.uupload.ir/files/mrghooghooli/mrghooghooli/video_origami_introduce/video_origami_introduce_"+ 4 +".mp4"
         ),
         OrigamiParkModel(
             ListOrigamiParkEnum.VIDEO_2,
             R.drawable.video_origami_pic_5,
             size = SizeTypeTools.NORMAL,
-            urlVideo = "nFhb3wQ3IKM"
+            urlVideo = "https://s1.uupload.ir/files/mrghooghooli/mrghooghooli/video_origami_introduce/video_origami_introduce_"+ 5 +".mp4"
         )
 
 

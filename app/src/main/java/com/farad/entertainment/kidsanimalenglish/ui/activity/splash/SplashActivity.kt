@@ -25,7 +25,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>(), MainNavigator {
         try {
             binding.tvTitleSplash.enterJumpSlowAnimation()
 
-            lifecycleScopeDelayTryCatch(2500) {
+            lifecycleScopeDelayTryCatch(0) {
                 goHome()
             }
 

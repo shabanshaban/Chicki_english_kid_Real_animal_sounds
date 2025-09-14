@@ -25,8 +25,8 @@ import com.farad.entertainment.kidsanimalenglish.data.model.enumModel.PlaySoundA
 import com.farad.entertainment.kidsanimalenglish.data.model.enumModel.ZoomImageAnimal
 import com.farad.entertainment.kidsanimalenglish.data.model.enumModel.getListData
 import com.farad.entertainment.kidsanimalenglish.databinding.FragmentMainBinding
+import com.farad.entertainment.kidsanimalenglish.kids_ringtone_english.DialogClose
 import com.farad.entertainment.kidsanimalenglish.ui.activity.main.ViewModelMain
-import com.farad.entertainment.kidsanimalenglish.ui.dialog.DialogClose
 import com.farad.entertainment.kidsanimalenglish.ui.dialog.DialogEnterInviteFriends
 import com.farad.entertainment.kidsanimalenglish.ui.dialog.DialogInviteFriends
 import com.farad.entertainment.kidsanimalenglish.ui.dialog.DialogOpenItem
@@ -384,16 +384,12 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
         }
 
 
-        binding.imageMenu.shakeAnimation()
 
 
         binding.ReferCode.text = sharedPreferencesManager.inviteCode
 
 
 
-        binding.imageMenu.setOnSafeClickListener {
-            binding.drawerLayout.openDrawer(Gravity.LEFT)
-        }
 
 
         binding.imageCopyInivtedCode.setOnSafeClickListener {
@@ -523,10 +519,7 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
         }
         binding.btnPlayMusic.setOnSafeClickListener {
             it.animClick()
-            val soundPlay = listItemAnimal.filter { m -> m.soundPlay.isNotNull() && m.isLock.not() }
-            if (soundPlay.isEmpty()) {
-                context.toast("First you have to unlock the animals")
-            } else {
+            val soundPlay = listItemAnimal.filter { m -> m.soundPlay.isNotNull()  }
 
                 if (isPlayMusic) {
                     binding.btnPlayMusic.setImageResource(R.drawable.icon_play_all)
@@ -543,7 +536,6 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
                 }
                 binding.playerTop.visibleOrGone(!isPlayMusic, true)
                 isPlayMusic = !isPlayMusic
-            }
 
 
         }
@@ -606,47 +598,28 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
     }
 
     override fun initObserveViewModel() {
-
-    /*    viewModel.getUserInfoLiveData()?.observe(this) {
-            it?.let {
+        viewModel.getUserInfoLiveData()?.observe(this) {
 
 
-                listItem.clear()
-                it.listItem?.let { it1 -> listItem.addAll(it1) }
 
-                val listItem2 = it.listItem
-                val newList = context?.getListData()?.map {
-                    if (listItem2 != null) {
-                        it.isLock = !listItem2.contains((it.id.numberId + 1).toString())
-                    }
-                    it
-                }
+            listItem.clear()
+            it?.listItem?.let {
+                it1 -> listItem.addAll(it1)
 
-                newList?.let { it1 ->
-                    listItemAnimal.clear()
-                    listItemAnimal.addAll(it1)
-                }
 
-                updateServerItem(newList)
-
-                binding.playerTop.initPlayer(listItemAnimal.filter { m -> m.soundPlay.isNotNull() && m.isLock.not() })
-                if (listItem2 != null) {
-                    binding.circularProgressBar.progress = listItem2.size.toFloat()
-                }
-                binding.tvProgress.text =
-                    "%" + listItem2?.let { it1 ->
-                        binding.circularProgressBar.progressPercentage(it1.size).toInt()
-                            .toString()
-                    }
-                if (isDestroyView) {
-                    mainAnimalAdapter.submitList(null)
-                    isDestroyView = false
-                }
-                mainAnimalAdapter.submitList(newList)
             }
 
 
-        }*/
+
+
+
+
+            binding.playerTop.initPlayer(listItemAnimal.filter { m -> m.soundPlay.isNotNull()   })
+
+
+            mainAnimalAdapter.submitList(listItemAnimal)
+        }
+
     }
 
     private fun updateServerItem(newList: List<AnimalModel>?) {

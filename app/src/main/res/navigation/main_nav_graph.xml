@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@+id/mainFragment">
+    app:startDestination="@id/mainFragmentRingTone">
 
 
     <fragment
@@ -585,6 +585,16 @@
         <argument
             android:name="dataVideo"
             app:argType="com.farad.entertainment.kidsanimalenglish.data.model.VideoPlayerModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragmentRingTone"
+        android:name="com.farad.entertainment.kidsanimalenglish.kids_ringtone_english.home.MainFragmentRingTone"
+        android:label="MainFragmentRingTone"
+        tools:layout="@layout/fragment_main_sound"
+        >
+        <action
+            android:id="@+id/action_mainFragmentRingTone_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 
 </navigation>

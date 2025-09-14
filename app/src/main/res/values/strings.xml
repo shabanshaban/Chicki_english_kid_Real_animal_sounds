@@ -1,6 +1,6 @@
 <resources>
     <string name="token_banner_standard">ca-app-pub-6201798499291567/1835796625</string>
-    <string name="app_name">Chicki</string>
+    <string name="app_name">Real animal sounds</string>
     <string name="app_name_splash_text">Chicki | Animal sounds</string>
     <string name="app_name_splash_text2">Chicki \n Animal sounds</string>
 
@@ -86,6 +86,46 @@
     <string name="english_73">Skunk</string>
     <string name="english_74">Hog</string>
     <string name="english_75">Bat</string>
+    <string name="english_76">Swan</string>
+    <string name="english_77">Myna</string>
+    <string name="english_78">Pelikan</string>
+    <string name="english_79">Quebec</string>
+    <string name="english_80">Casco</string>
+    <string name="english_81">Budgies</string>
+    <string name="english_82">Finch</string>
+    <string name="english_83">Hamster</string>
+    <string name="english_84">Mandarin Duck</string>
+    <string name="english_85">Spilopelia</string>
+    <string name="english_86">Carduelis</string>
+    <string name="english_87">Toucan</string>
+    <string name="english_88">Cockatiel</string>
+    <string name="english_89">Agapornis</string>
+    <string name="english_90">Martes</string>
+    <string name="english_91">Balearica</string>
+    <string name="english_92">goldfinch</string>
+    <string name="english_93">Tauraco</string>
+    <string name="english_94">Cardinal</string>
+    <string name="english_95">Hedgehog</string>
+    <string name="english_96">Magpie</string>
+    <string name="english_97">Grey Heron</string>
+    <string name="english_98">Iguana</string>
+    <string name="english_99">Anteater</string>
+    <string name="english_100">Teal</string>
+    <string name="english_101">Cheetah</string>
+    <string name="english_102">Lama</string>
+    <string name="english_103">Walrus</string>
+    <string name="english_104">Hippo</string>
+    <string name="english_105">Gorilla</string>
+    <string name="english_106">Vanellus</string>
+    <string name="english_107">kiwi</string>
+    <string name="english_108">Guineafowl</string>
+    <string name="english_109">Cuckoo</string>
+    <string name="english_110">Houbara</string>
+    <string name="english_111">Hornbill</string>
+    <string name="english_112">Meerkat</string>
+    <string name="english_113">Opposum</string>
+    <string name="english_114">Wagtail</string>
+    <string name="english_115">Pangolins</string>
 
     <string name="french_1">Lapin</string>
     <string name="french_2">Abeille</string>
@@ -162,6 +202,46 @@
     <string name="french_73">Moufette</string>
     <string name="french_74">Sanglier</string>
     <string name="french_75">Chauve-souris</string>
+    <string name="french_76">Cygne</string>
+    <string name="french_77">Mainate</string>
+    <string name="french_78">Pélican</string>
+    <string name="french_79">Québec</string>
+    <string name="french_80">Casco</string> <!-- نیاز به بررسی: ممکن است نام خاص باشد -->
+    <string name="french_81">Perruches ondulées</string>
+    <string name="french_82">Pinson</string>
+    <string name="french_83">Hamster</string>
+    <string name="french_84">Canard mandarin</string>
+    <string name="french_85">Spilopélie</string> <!-- نام علمی، همان نگه داشته شد -->
+    <string name="french_86">Carduelis</string> <!-- نام علمی -->
+    <string name="french_87">Toucan</string>
+    <string name="french_88">Calopsitte élégante</string>
+    <string name="french_89">Inséparables</string> <!-- Agapornis = les inséparables -->
+    <string name="french_90">Martre</string>
+    <string name="french_91">Grue couronnée</string> <!-- Balearica = grue couronnée -->
+    <string name="french_92">Chardonneret</string>
+    <string name="french_93">Touraco</string>
+    <string name="french_94">Cardinal</string>
+    <string name="french_95">Hérisson</string>
+    <string name="french_96">Pie</string>
+    <string name="french_97">Héron cendré</string>
+    <string name="french_98">Iguane</string>
+    <string name="french_99">Fourmilier</string>
+    <string name="french_100">Sarcelle</string>
+    <string name="french_101">Guépard</string>
+    <string name="french_102">Lama</string>
+    <string name="french_103">Morse</string>
+    <string name="french_104">Hippopotame</string>
+    <string name="french_105">Gorille</string>
+    <string name="french_106">Vanneau</string>
+    <string name="french_107">Kiwi</string>
+    <string name="french_108">Pintade</string>
+    <string name="french_109">Coucou</string>
+    <string name="french_110">Outarde houbara</string>
+    <string name="french_111">Calao</string>
+    <string name="french_112">Suricate</string>
+    <string name="french_113">Opossum</string>
+    <string name="french_114">Bergeronnette</string>
+    <string name="french_115">Pangolins</string>
 
 
     <string name="reveres_1">Bitbar</string>

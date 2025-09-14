@@ -1,6 +1,8 @@
-package com.farad.entertainment.kidsanimalenglish.ui.dialog
+package com.farad.entertainment.kidsanimalenglish.kids_ringtone_english
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
@@ -16,15 +18,13 @@ import com.farad.entertainment.kidsanimalenglish.utils.goMarketPage
 import com.farad.entertainment.kidsanimalenglish.utils.goToMainApps
 import com.farad.entertainment.kidsanimalenglish.utils.gone
 import com.farad.entertainment.kidsanimalenglish.utils.implementSpringAnimationTrait
-import com.farad.entertainment.kidsanimalenglish.utils.intentToTelegram
-import com.farad.entertainment.kidsanimalenglish.utils.invitedFriend
+import com.farad.entertainment.kidsanimalenglish.utils.intentToInstagram
 import com.farad.entertainment.kidsanimalenglish.utils.loadImage
 import com.farad.entertainment.kidsanimalenglish.utils.safeDismiss
 import com.farad.entertainment.kidsanimalenglish.utils.setOnSafeClickListener
 import com.farad.entertainment.kidsanimalenglish.utils.shakeAnimation2
-import com.farad.entertainment.kidsanimalenglish.utils.subscribeToChannel
+import com.farad.entertainment.kidsanimalenglish.utils.shareText
 import com.farad.entertainment.kidsanimalenglish.utils.visible
-import com.farad.entertainment.kidsanimalenglish.utils.visibleOrGone
 
 
 class DialogClose : BaseDialogFragment<DialogCloseBinding>() {
@@ -51,18 +51,14 @@ class DialogClose : BaseDialogFragment<DialogCloseBinding>() {
     }
 
     override fun setup() {
-
-        // val animDrawable = binding.animatedGradient.background as AnimationDrawable
-
-        //  animDrawable.start()
-
         isCancelable = true
         initDialog()
         initData()
-
         listener()
         checkLanguage(farsi = {}, english = {
             binding.imgLogo.gone()
+            binding.lineAdd.gone()
+            binding.txtAd.gone()
         })
     }
 
@@ -75,35 +71,32 @@ class DialogClose : BaseDialogFragment<DialogCloseBinding>() {
         }
         binding.btnComment.shakeAnimation2()
         binding.btnAboutMe.setOnSafeClickListener {
-            val navigate = MainNavGraphDirections.actionGlobalToAboutTeamFragment()
-            findNavController().navigate(navigate)
+           findNavController().navigate(MainNavGraphDirections.actionGlobalToAboutTeamFragment())
         }
         binding.btnWhatsapp.setOnSafeClickListener {
             binding.root.showDialogLock()
 
 
         }
-        binding.animatedGradient.setOnSafeClickListener {
-            binding.animatedGradient.animClick()
-            context?.subscribeToChannel()
-        }
         binding.imageAdd.implementSpringAnimationTrait()
         binding.imageAdd.setOnSafeClickListener {
             binding.imageAdd.animClick()
-            context?.subscribeToChannel()
-
-
+            if (link.contains("package_name:")) {
+                context?.goToMainApps()
+            } else {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(link)))
+            }
         }
         binding.btnComment.setOnSafeClickListener {
             binding.btnComment.animClick()
             context?.goToMainApps()
         }
         binding.btnShare.setOnSafeClickListener {
-            context?.invitedFriend()
+            context?.shareText("")
         }
 
-        binding.btnTelegram.setOnSafeClickListener {
-            context?.intentToTelegram()
+        binding.btnInstagram.setOnSafeClickListener {
+            context?.intentToInstagram()
         }
 
         binding.btnExit.setOnSafeClickListener {
@@ -120,9 +113,9 @@ class DialogClose : BaseDialogFragment<DialogCloseBinding>() {
                 "package_name:"
             ))
         ) {
+            binding.imageAdd.visible()
             binding.txtAd.visible()
-            //   binding.txtAd.text = text
-            binding.txtAd.visibleOrGone(text.isNotEmpty())
+            binding.txtAd.text = text
             if (textColor.contains("#")) {
                 binding.txtAd.setTextColor(Color.parseColor(textColor))
             }
@@ -130,6 +123,8 @@ class DialogClose : BaseDialogFragment<DialogCloseBinding>() {
                 binding.txtAd.setBackgroundColor(Color.parseColor(bgColor))
             }
         } else {
+            binding.imageAdd.gone()
+            binding.txtAd.gone()
         }
 
     }
@@ -143,9 +138,8 @@ class DialogClose : BaseDialogFragment<DialogCloseBinding>() {
             imageAdVersion = it.imageAdVersion.toString()
             bgColor = it.bgColor
             textColor = it.textColor
-
         }
-        binding.imageAdd.loadImage(R.drawable.banner_subscribe_youtube)
+        binding.imageAdd.loadImage(imageAddress)
 
     }
 }

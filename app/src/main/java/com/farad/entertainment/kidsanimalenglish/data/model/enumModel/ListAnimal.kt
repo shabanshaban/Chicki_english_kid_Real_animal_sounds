@@ -108,7 +108,7 @@ data class AnimalModel(
     val imagePainting: String,
     val imageColoring: String,
     val imagePaintingSvg: Int,
-    var isLock: Boolean = true
+    var isLock: Boolean = false
 
 ) : Parcelable
 
