@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_page">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shape_bottom_corner_orange" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageMedal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/shape_circle_white"
+        android:backgroundTint="@color/white"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageTop"
+        app:layout_constraintEnd_toEndOf="@id/imageTop"
+        app:layout_constraintStart_toStartOf="@id/imageTop"
+        app:layout_constraintTop_toBottomOf="@id/imageTop"
+        app:srcCompat="@drawable/circle_medal"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountMovementNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_6sdp"
+        android:gravity="center"
+        android:padding="@dimen/_6sdp"
+        android:text="@string/movement_s"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/imageMedal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timerUserNow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/time_s"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvCountMovementNow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageMedal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutEasy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="26dp"
+            android:background="@drawable/shape_white_rounded"
+            android:paddingBottom="8dp">
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupEasy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="viewEasy,tvTimeEasy,tvMovementEasy"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bestEasyLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_green_top_corner"
+                android:gravity="center"
+                android:text="@string/best_easy_level_record"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewEasy"
+                android:layout_width="@dimen/_3sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@color/txt_condition_educate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bestEasyLevel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTimeEasy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/time_s"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="@+id/viewEasy"
+                app:layout_constraintEnd_toStartOf="@+id/viewEasy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewEasy" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMovementEasy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/movement_s"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="@+id/viewEasy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/viewEasy"
+                app:layout_constraintTop_toTopOf="@+id/viewEasy" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoRecordEasy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/no_record"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bestEasyLevel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="26dp"
+            android:background="@drawable/shape_white_rounded"
+            android:paddingBottom="8dp">
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="viewMedium,tvTimeMedium,tvMediumMovement"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bestMediumLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_yellow_top_corner"
+                android:gravity="center"
+                android:text="@string/best_medium_level_record"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewMedium"
+                android:layout_width="@dimen/_3sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@color/txt_condition_educate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bestMediumLevel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTimeMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/time_s"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="@+id/viewMedium"
+                app:layout_constraintEnd_toStartOf="@+id/viewMedium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewMedium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMediumMovement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/movement_s"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="@+id/viewMedium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/viewMedium"
+                app:layout_constraintTop_toTopOf="@+id/viewMedium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoRecordMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/no_record"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bestMediumLevel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="26dp"
+            android:background="@drawable/shape_white_rounded"
+            android:paddingBottom="8dp">
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupHard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="viewHard,tvTimeHard,tvMovementHard"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bestHardLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_red_top_corner"
+                android:gravity="center"
+                android:text="@string/best_medium_level_record"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewHard"
+                android:layout_width="@dimen/_3sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@color/txt_condition_educate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bestHardLevel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTimeHard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/time_s"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="@+id/viewHard"
+                app:layout_constraintEnd_toStartOf="@+id/viewHard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewHard" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMovementHard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/movement_s"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="@+id/viewHard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/viewHard"
+                app:layout_constraintTop_toTopOf="@+id/viewHard" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoRecordHard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/no_record"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bestHardLevel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

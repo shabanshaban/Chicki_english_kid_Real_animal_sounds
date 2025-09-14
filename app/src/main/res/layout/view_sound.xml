@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_80sdp"
+    android:padding="8dp"
+    android:id="@+id/motionLayout"
+    app:layoutDescription="@xml/view_sound_scene"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnSound"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/button_music"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/groupSlider"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/shape_2_white"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSound"
+        app:layout_constraintTop_toTopOf="@+id/btnSound">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageMute"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/button_mute_off"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSound"
+            app:layout_constraintStart_toEndOf="@+id/btnSound"
+            app:layout_constraintTop_toTopOf="@+id/btnSound" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/seek_sound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:value="0.5"
+            android:valueTo="1"
+            app:haloColor="@color/orange_text"
+            app:labelBehavior="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/img_mute"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_mute"
+            app:layout_constraintTop_toTopOf="@+id/img_mute"
+            app:thumbColor="@color/orange_text"
+            app:thumbRadius="6dp"
+            app:trackColorActive="@color/orange_color_picker"
+            app:trackColorInactive="@color/colorSplash"
+            app:trackHeight="3dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

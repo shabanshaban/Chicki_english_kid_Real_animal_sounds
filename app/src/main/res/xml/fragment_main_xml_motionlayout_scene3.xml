@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <KeyFrameSet>
+        </KeyFrameSet>
+        <OnSwipe motion:touchAnchorId="@+id/recyclerview"
+            motion:autoCompleteMode="continuousVelocity"
+            />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/dividerItem"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/toolbarTop"
+            android:translationZ="0dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:elevation="0dp" />
+        <Constraint
+            android:id="@+id/toolbarTop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/imageToolbar"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/imageCoinm"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            motion:layout_constraintBottom_toTopOf="@+id/dividerItem"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/tvCoinm"
+            motion:layout_constraintEnd_toEndOf="@id/imageCoinm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/imageCoinm"
+            motion:layout_constraintStart_toStartOf="@+id/imageCoinm">
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customDimension="8dp" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/imageMenu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/imageCoinm"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="70dp"
+            motion:layout_constraintTop_toTopOf="@+id/imageToolbar"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageToolbar"
+            motion:layout_constraintEnd_toEndOf="parent"
+            />
+        <Constraint
+            android:id="@+id/tvCoinm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toStartOf="@+id/imageCoinm"
+            motion:layout_constraintTop_toTopOf="@+id/imageCoinm"
+            android:alpha="0.5">
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customDimension="8dp" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/dividerItem"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:translationZ="0dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:elevation="0dp" />
+        <Constraint
+            android:id="@+id/linearLayoutCompat5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:alpha="1" />
+        <Constraint
+            android:id="@+id/toolbarTop"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/imageToolbar"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/imageMenu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:alpha="0.2" />
+    </ConstraintSet>
+</MotionScene>

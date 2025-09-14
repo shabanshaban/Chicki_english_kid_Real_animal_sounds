@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        tools:text="sina"
+        android:textColor="#7E5702"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+</FrameLayout>

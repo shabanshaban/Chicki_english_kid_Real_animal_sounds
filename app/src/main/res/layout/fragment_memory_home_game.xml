@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/header" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/memory_game"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="@id/imageHeader"
+        app:layout_constraintEnd_toEndOf="@id/imageHeader"
+        app:layout_constraintTop_toTopOf="@id/imageHeader" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnShare"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="18dp"
+        android:adjustViewBounds="true"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_share" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnMute"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/sound_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageHeader" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnScore"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:text="@string/score"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:textColor="@color/black"
+        app:backgroundTint="#00CE7C"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/medal_icon"
+        app:iconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/btnMute"
+        app:layout_constraintEnd_toStartOf="@+id/btnSetting"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMute" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSetting"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:text="@string/setting"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16sdp"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:backgroundTint="#00d2ff"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_setting"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/btnScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnScore"
+        app:layout_constraintTop_toTopOf="@+id/btnScore" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnScore">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEasy"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:text="@string/easy"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/chose1"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSetting" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMedium"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:text="@string/medium"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/chose1"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEasy" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:text="@string/hard"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/chose1"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMedium" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVeryHard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:text="@string/very_hard"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/chose1"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnHard" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

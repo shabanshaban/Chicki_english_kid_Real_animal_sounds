@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "509866724302",
+    "project_id": "kidrealanimalsounds",
+    "storage_bucket": "kidrealanimalsounds.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509866724302:android:878c5f7ed6337c4b18399f",
+        "android_client_info": {
+          "package_name": "com.farad.entertainment.kids_ringtone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmo8Npp-rwa_EDP82E-MGOVCVpvPaFNtM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

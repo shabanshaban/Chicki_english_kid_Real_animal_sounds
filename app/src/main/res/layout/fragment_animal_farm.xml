@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/background_food"
+        android:scaleType="fitXY"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rtlDrawabel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingEnd="40dp"
+        android:paddingStart="0dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCloud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgSun"
+            android:layout_toStartOf="@+id/btnNextfarm"
+            android:src="@drawable/ic_cloud" />
+
+        <View
+            android:id="@+id/imgAnimalPic"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/gif_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+
+        <View
+            android:id="@+id/lin_Food1"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_toStartOf="@+id/imgFood2"
+            android:background="@drawable/rounded_shap_cerem" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFood1"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:layout_marginBottom="@dimen/_18sdp"
+            android:layout_toStartOf="@+id/imgFood2"
+            android:adjustViewBounds="true"
+            android:background="@drawable/p_11" />
+
+        <View
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/rounded_shap_cerem" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFood3"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_18sdp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/p_11" />
+
+        <View
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_toStartOf="@+id/imgFood3"
+            android:background="@drawable/rounded_shap_cerem" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFood2"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:layout_marginBottom="@dimen/_18sdp"
+            android:layout_toStartOf="@+id/imgFood3"
+            android:adjustViewBounds="true"
+            android:background="@drawable/p_11" />
+
+        <Button
+            android:id="@+id/btnNextfarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/next"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgSun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imgAnimalPic"
+            android:layout_toStartOf="@+id/imgFood3"
+            android:src="@drawable/sun_light" />
+
+
+    </RelativeLayout>
+
+    <com.farad.entertainment.kidsanimalenglish.cv.canvasRain.CanvasView
+        android:id="@+id/canvas_rain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_80sdp"
+    app:cardCornerRadius="16dp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    app:cardBackgroundColor="#fde09e"
+    app:strokeWidth="0.5dp"
+    app:strokeColor="#fde09e"
+    app:cardElevation="2dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageTools"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_green_top_corner_20"
+            android:backgroundTint="#f9b20d"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@+id/tvNameTools"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/p_animal_tools_1" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameTools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingRight="4dp"
+            android:paddingLeft="4dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/kindergarten"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</com.google.android.material.card.MaterialCardView>

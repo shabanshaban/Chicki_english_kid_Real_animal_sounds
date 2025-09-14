@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCong1"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@drawable/shape_dialog_buy10"
+
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/memory_game_congratulation_text"
+        android:textAllCaps="true"
+        android:textColor="#ff0000"
+        android:textSize="@dimen/_24sdp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@drawable/shape_dialog_buy10"
+
+        android:gravity="center"
+        android:text="@string/memory_game_congratulation_text"
+        android:textAllCaps="true"
+        android:textColor="#ff0000"
+        android:textSize="@dimen/_24sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_seekbar_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/txtCong1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtLevel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/game_level2"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/textColorDialogFinishMemoryGame"
+            android:textSize="@dimen/_18sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtLevelText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/textColorDialogFinishMemoryGame"
+            android:textSize="@dimen/_18sdp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_seekbar_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_of_moves"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/textColorDialogFinishMemoryGame"
+            android:textSize="@dimen/_18sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtScoreText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/textColorDialogFinishMemoryGame"
+            android:textSize="@dimen/_18sdp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_seekbar_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
+        app:layout_constraintTop_toBottomOf="@+id/txtCong1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/elapsed_time"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/textColorDialogFinishMemoryGame"
+            android:textSize="@dimen/_18sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTimeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/textColorDialogFinishMemoryGame"
+            android:textSize="@dimen/_18sdp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

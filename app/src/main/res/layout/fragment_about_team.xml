@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_header" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnShare"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="@id/imageToolbar"
+        app:layout_constraintStart_toStartOf="@id/imageToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView7"
+        app:srcCompat="@drawable/ic_share2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_us"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="20dp"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:visibility="gone"
+                android:layout_marginEnd="20dp"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:src="@drawable/logo_splash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAppName3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingRight="20dp"
+                android:fontFamily="@font/iran_sans_light"
+                app:fontFamily="@font/iran_sans_light"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="@string/group_name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/red_text"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="start"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="10dp"
+                android:singleLine="false"
+                android:text="@string/about_us_text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAppName3"
+                tools:ignore="UnusedAttribute" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autoLink="web"
+                android:gravity="center"
+                android:text="@string/privacy_policy"
+                android:visibility="invisible"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#258af6"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAppName4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="@string/resources"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnPrivacy" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtResources"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                app:fontFamily="@font/iran_sans_light"
+                android:fontFamily="@font/iran_sans_light"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:text="Free Music Archive\nSoundCloud\nJamendo\nYouTube Audio Library\nIncompetech"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#525252"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAppName4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_whatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_ripple_shape_green_direct_call2"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:text="@string/whatsapp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:drawableStartCompat="@drawable/icon_whats_app"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtResources" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/version_s"
+                android:layout_marginTop="12dp"
+                android:textColor="#525252"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_whatsapp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

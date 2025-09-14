@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="4dp"
+    android:layout_marginLeft="4dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageItem"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RoundedImageView_12dp"
+        tools:srcCompat="@drawable/p_1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageItemColor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/bg_border_orange"
+        android:alpha="0.5"
+        app:layout_constraintTop_toTopOf="@+id/imageItem"
+        app:layout_constraintBottom_toBottomOf="@id/imageItem"
+        app:layout_constraintStart_toStartOf="@id/imageItem"
+        app:layout_constraintEnd_toEndOf="@id/imageItem"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginTop="6dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_border_orange"
+        tools:text="tvTitle"
+        android:textColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageItem" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:background="@color/backKidPhon">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageTopNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kids_phone_ringing" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtPhoneKidsNumScreen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:maxLength="8"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_30sdp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="@id/imageTopNumber"
+        app:layout_constraintEnd_toEndOf="@id/imageTopNumber"
+        app:layout_constraintStart_toStartOf="@id/imageTopNumber"
+        app:layout_constraintTop_toTopOf="@id/imageTopNumber"
+        tools:text="1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageGif"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_height="0dp"
+        android:layout_margin="38dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageTopNumber"
+        app:layout_constraintEnd_toEndOf="@id/imageTopNumber"
+        app:layout_constraintStart_toStartOf="@id/imageTopNumber"
+        app:layout_constraintTop_toTopOf="@id/imageTopNumber"
+        tools:srcCompat="@drawable/pa_1" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:weightSum="4"
+        app:layout_constraintBottom_toTopOf="@+id/btnChangeType"
+        app:layout_constraintEnd_toEndOf="@id/imageTopNumber"
+        app:layout_constraintStart_toStartOf="@id/imageTopNumber"
+        app:layout_constraintTop_toBottomOf="@id/imageTopNumber">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumber1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:tag="1"
+                app:srcCompat="@drawable/kids_phone_num1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumber2"
+                android:tag="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                app:srcCompat="@drawable/kids_phone_num2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumber3"
+                android:tag="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                app:srcCompat="@drawable/kids_phone_num3" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumber4"
+                android:tag="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/kids_phone_num4" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumber5"
+                android:tag="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/kids_phone_num5" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumber6"
+                android:tag="6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/kids_phone_num6" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumber7"
+                android:tag="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/kids_phone_num7" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumber8"
+                android:tag="8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/kids_phone_num8" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumber9"
+                android:layout_width="0dp"
+                android:tag="9"
+                android:layout_margin="2dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/kids_phone_num9" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumberStar"
+                android:layout_width="0dp"
+                android:tag="10"
+                android:layout_margin="2dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/kids_phone_num_star" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumber0"
+                android:layout_width="0dp"
+                android:tag="0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                app:srcCompat="@drawable/kids_phone_num0" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageNumberSharp"
+                android:layout_width="0dp"
+                android:tag="11"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                app:srcCompat="@drawable/kids_phone_num_sharp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnChangeType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/phone_kids_mode_numbers_en"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:adjustViewBounds="true"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <View
+        android:id="@+id/touchView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

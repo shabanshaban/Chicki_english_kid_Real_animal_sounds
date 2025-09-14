@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColoring"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imagePuzzle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="@dimen/_26sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageArrowBottom"
+        app:srcCompat="@drawable/p_1" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="@id/imagePuzzle"
+        app:layout_constraintBottom_toBottomOf="@id/imagePuzzle"
+        app:layout_constraintStart_toStartOf="@id/imagePuzzle"
+        app:layout_constraintEnd_toEndOf="@id/imagePuzzle"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shape_bottom_corner_orange" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="@dimen/_4sdp"
+
+        android:gravity="center"
+        android:singleLine="false"
+        android:text="@string/click_on_the_image_below_to_get_started"
+        android:textColor="@color/black3"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageArrowBottom"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="8dp"
+        android:rotation="90"
+        app:tint="@color/black3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHeader"
+        app:srcCompat="@drawable/double_arrow_24" />
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageAnimal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_26sdp"
+        android:adjustViewBounds="true"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:background="@color/white"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageArrowBottom"
+        app:srcCompat="@drawable/p_1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_level"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bg_ripple_shape_animal_profile_drawing_rounded"
+
+        android:padding="10dp"
+        android:text="@string/game_level"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_records"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_records"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:layout_weight="1"
+        android:background="@drawable/bg_ripple_shape_animal_profile_pic_rounded"
+
+        android:gravity="center"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/score"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_level"
+        app:layout_constraintTop_toTopOf="@+id/btn_level" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/panelFirst"
+        app:constraint_referenced_ids="txtHeader,imageArrowBottom,btn_records,btn_level"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+
+        android:gravity="end"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewIndicator"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="سطح آسان"
+        />
+
+    <View
+        android:id="@+id/viewIndicator"
+        android:layout_width="2dp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+
+        android:padding="8dp"
+        android:gravity="start"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/viewIndicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="00:00" />
+    <RelativeLayout
+        android:id="@+id/frameGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="top"
+        android:visibility="visible">
+
+    </RelativeLayout>
+    
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/panelGame"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="txt_time,viewIndicator,textLevel"
+        />
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

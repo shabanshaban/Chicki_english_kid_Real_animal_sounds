@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220sdp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bg_dialog_start_game" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lnrSoundPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/txtExplain">
+
+            <RadioGroup
+                android:id="@+id/radioGrp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+
+                android:paddingRight="5dp">
+
+                <RadioButton
+                    android:id="@+id/farsiName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_animal_profile_tools"
+                    android:gravity="center"
+                    android:tag="fa"
+                    android:visibility="gone"
+                    android:text="@string/fa"
+                    android:textColor="#673AB7"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/animalSound"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_animal_profile_tools"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:tag="s"
+                    android:text="@string/animal_sound"
+                    android:textColor="#673AB7"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/englishName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_animal_profile_tools"
+                    android:gravity="center"
+                    android:tag="en"
+                    android:text="@string/en"
+                    android:textColor="#673AB7"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtExplain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginBottom="@dimen/_8sdp"
+
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/text_dialog_start"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/btnExit" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:paddingBottom="16dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnExit"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/bg_rounded_ripple_btn_red"
+                android:clickable="true"
+                android:focusable="true"
+
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/exit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnStart"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_rounded_ripple_btn_green"
+                android:gravity="center"
+                android:text="@string/start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+        </FrameLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

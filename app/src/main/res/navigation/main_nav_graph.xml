@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@+id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.home.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_settingFragment"
+            app:destination="@id/settingFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_mainFragment_to_kindergartenFragment"
+            app:destination="@id/kindergartenFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_gameHomeFragment"
+            app:destination="@id/gameHomeFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailsAnimalFragment"
+            app:destination="@id/detailsAnimalFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/kindergartenFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.kindergarten.KindergartenFragment"
+        android:label="KindergartenFragment"
+        tools:layout="@layout/fragment_kindergarten">
+        <action
+            android:id="@+id/action_kindergartenFragment_to_listVideoKindergartenFragment"
+            app:destination="@id/listVideoKindergartenFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <argument
+            android:name="idAnimal"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameHomeFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.home.GameHomeFragment"
+        android:label="GameHomeFragment"
+        tools:layout="@layout/fragment_game_home">
+        <action
+            android:id="@+id/action_gameHomeFragment_to_wordGameFragment"
+            app:destination="@id/wordGameFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_wordGameListFragment"
+            app:destination="@id/wordGameListFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_bubbleGameFragment"
+            app:destination="@id/bubbleGameFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_balloonsFragment"
+            app:destination="@id/balloonsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_listAnimalPaintFragment"
+            app:destination="@id/listAnimalPaintFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_scratchGameFragment"
+            app:destination="@id/scratchGameFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_guessAnimalFragment"
+            app:destination="@id/guessAnimalFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_animalFarmFragment"
+            app:destination="@id/animalFarmFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_galleryOnlineFragment"
+            app:destination="@id/galleryOnlineFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_mobileKidFragment"
+            app:destination="@id/mobileKidFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_memoryHomeGameFragment"
+            app:destination="@id/memoryHomeGameFragment"
+
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_storiesFragmentGameHome"
+            app:destination="@id/storiesFragmentGameHome"
+
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_gameHomeFragment_to_settingFragment"
+            app:destination="@id/settingFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsAnimalFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.home.detailsAnimal.DetailsAnimalFragment"
+        android:label="DetailsAnimalFragment"
+        tools:layout="@layout/fragment_details_animal">
+
+        <argument
+            android:name="idAnimal"
+            app:argType="integer" />
+
+        <argument
+            android:name="animalModel"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.enumModel.AnimalModel" />
+        <action
+            android:id="@+id/action_detailsAnimalFragment_to_albumImageFragment"
+            app:destination="@id/albumImageFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_detailsAnimalFragment_to_aboutAnimalFragment"
+            app:destination="@id/aboutAnimalFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+
+            />
+        <action
+            android:id="@+id/action_detailsAnimalFragment_to_kindergartenFragment"
+            app:destination="@id/kindergartenFragment"
+
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_detailsAnimalFragment_to_paintingFragment"
+            app:destination="@id/paintingFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_detailsAnimalFragment_to_coloringFragment"
+            app:destination="@id/coloringFragment"
+
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_detailsAnimalFragment_to_puzzleFragment"
+            app:destination="@id/puzzleFragment"
+
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/albumImageFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.home.albumImageUser.AlbumImageFragment"
+        android:label="albumImageFragment"
+        tools:layout="@layout/fragment_album">
+        <argument
+            android:name="idAnimal"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutAnimalFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.home.aboutAnimal.AboutAnimalFragment"
+        android:label="AboutAnimalFragment"
+        tools:layout="@layout/fragment_about_animal">
+        <argument
+            android:name="idAnimal"
+            app:argType="integer" />
+        <argument
+            android:name="animalModel"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.enumModel.AnimalModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.home.videoPlayerKid.VideoPlayerFragment"
+        android:label="VideoPlayerFragment"
+        tools:layout="@layout/fragment_video_player">
+        <argument
+            android:name="dataVideo"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.VideoPlayerModel" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/global_videoPlayer"
+        app:destination="@id/videoPlayerFragment"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
+    <action
+        android:id="@+id/global_videoPlayer2"
+        app:destination="@id/videoPlayerFragment"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
+    <fragment
+        android:id="@+id/soundGifAnimalFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.home.soundGifAnimal.SoundGifAnimalFragment"
+        android:label="SoundGifAnimalFragment"
+        tools:layout="@layout/fragment_sound_gif_animal">
+        <argument
+            android:name="animalModel"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.enumModel.AnimalModel" />
+    </fragment>
+
+    <action
+        android:id="@+id/global_soundGifAnimalFragment"
+        app:destination="@id/soundGifAnimalFragment"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
+    <fragment
+        android:id="@+id/listVideoKindergartenFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.kindergarten.ListVideoKindergartenFragment"
+        android:label="ListVideoKindergartenFragment"
+        tools:layout="@layout/fragment_kindergarten_list_video">
+
+        <argument
+            android:name="dataModel"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.enumModel.KindergartenModel" />
+        <action
+            android:id="@+id/action_listVideoKindergartenFragment_to_origamiParkFragment"
+            app:destination="@id/origamiParkFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/paintingFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.home.painting.PaintingFragment"
+        android:label="PaintingFragment"
+        tools:layout="@layout/fragment_painting">
+        <argument
+            android:name="animalModel"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.enumModel.AnimalModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/coloringFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.home.painting.ColoringFragment"
+        android:label="ColoringFragment"
+        tools:layout="@layout/fragment_coloring">
+        <argument
+            android:name="animalModel"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.enumModel.AnimalModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/puzzleFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.home.puzzle.PuzzleFragment"
+        android:label="PuzzleFragment"
+        tools:layout="@layout/fragment_puzzle">
+        <argument
+            android:name="animalModel"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.enumModel.AnimalModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/origamiParkFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.kindergarten.parkOrigami.OrigamiParkFragment"
+        android:label="OrigamiFragment"
+        tools:layout="@layout/fragment_origami_park" />
+    <fragment
+        android:id="@+id/wordGameListFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.wordGame.listWord.WordGameListFragment"
+        android:label="WordGameFragment"
+        tools:layout="@layout/fragment_game_word_list">
+        <action
+            android:id="@+id/action_wordGameListFragment_to_wordGameFragment"
+            app:destination="@id/wordGameFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/wordGameFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.wordGame.wordBoardGame.WordGameFragment"
+        android:label="WordGameFragment"
+        tools:layout="@layout/fragment_game_word">
+        <argument
+            android:name="position"
+            app:argType="integer" />
+        <argument
+            android:name="wordGame"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.entity.WordGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/bubbleGameFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.bubbleGame.BubbleGameFragment"
+        android:label="BubbleGameFragment"
+        tools:layout="@layout/fragment_game_bubble" />
+    <fragment
+        android:id="@+id/balloonsFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.balloonsGame.BalloonsFragment"
+        android:label="BalloonsFragment"
+        tools:layout="@layout/fragment_game_balloons" />
+    <fragment
+        android:id="@+id/listAnimalPaintFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.listAnimalPaint.ListAnimalPaintFragment"
+        android:label="ListAnimalPaintFragment"
+        tools:layout="@layout/fragment_list_paint">
+        <action
+            android:id="@+id/action_listAnimalPaintFragment_to_paintingFragment"
+            app:destination="@id/paintingFragment"
+
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_listAnimalPaintFragment_to_coloringFragment"
+            app:destination="@id/coloringFragment"
+
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/scratchGameFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.scratchGame.home.ScratchGameFragment"
+        android:label="ScratchGameFragment"
+        tools:layout="@layout/fragment_game_scratch"
+
+        >
+        <action
+            android:id="@+id/action_scratchGameFragment_to_listScratchGameFragment"
+            app:destination="@id/listScratchGameFragment"
+
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/listScratchGameFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.scratchGame.list.ListScratchGameFragment"
+        android:label="ListScratchGameFragment"
+        tools:layout="@layout/fragment_list_game_scratch">
+        <action
+            android:id="@+id/action_listScratchGameFragment_to_scratchPlayGameFragment"
+            app:destination="@id/scratchPlayGameFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/scratchPlayGameFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.scratchGame.game.ScratchPlayGameFragment"
+        android:label="ScratchPlayGameFragment"
+        tools:layout="@layout/fragment_scratch_play_game">
+        <argument
+            android:name="dataScratch"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.entity.ScratchGame"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/guessAnimalFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.guessAnimal.GuessAnimalFragment"
+        android:label="GuessAnimalFragment"
+        tools:layout="@layout/fragment_guess_animal"
+        />
+    <fragment
+        android:id="@+id/animalFarmFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.animalFarm.AnimalFarmFragment"
+        android:label="AnimalFarmFragment"
+        tools:layout="@layout/fragment_animal_farm"
+        />
+    <fragment
+        android:id="@+id/galleryOnlineFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.galleryOnline.GalleryOnlineFragment"
+        android:label="GalleryOnlineFragment"
+        tools:layout="@layout/fragment_online_gallery"
+        />
+
+    <fragment
+        android:id="@+id/mobileKidFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.mobileKid.MobileKidFragment"
+        android:label="galleryOnlineFragment"
+        tools:layout="@layout/fragment_mobile_kid"
+        >
+        <action
+            android:id="@+id/action_mobileKidFragment_to_callRandomAnimal"
+            app:destination="@id/callRandomAnimal"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/callRandomAnimal"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.mobileKid.CallRandomAnimalFragment"
+        android:label="CallRandomAnimal"
+        tools:layout="@layout/fragment_call_random"
+        />
+    <fragment
+        android:id="@+id/memoryHomeGameFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.memoryGame.MemoryHomeGameFragment"
+        android:label="MemoryHomeGameFragment"
+        tools:layout="@layout/fragment_memory_home_game"
+        >
+        <action
+            android:id="@+id/action_memoryHomeGameFragment_to_memoryBoardGameFragment"
+            app:destination="@id/memoryBoardGameFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/memoryBoardGameFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.memoryGame.MemoryBoardGameFragment"
+        android:label="MemoryBoardGameFragment"
+        tools:layout="@layout/fragment_memory_board_game"
+        >
+        <argument
+            android:name="gameLevl"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.enumModel.GameLevel"
+
+            />
+        <argument
+            android:name="typeImage"
+            app:argType="string"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutTeamFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.home.aboutTeam.AboutTeamFragment"
+        android:label="AboutTeamFragment" />
+
+    <action
+        android:id="@+id/action_global_to_aboutTeamFragment"
+        app:destination="@id/aboutTeamFragment"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right"
+        />
+    <fragment
+        android:id="@+id/storiesFragmentGameHome"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.stories.StoriesFragmentGameHome"
+        android:label="StoriesFragmentGameHome"
+        tools:layout="@layout/fragment_stories_game_home"
+        >
+        <action
+            android:id="@+id/action_storiesFragmentGameHome_to_storiesFragmentList"
+            app:destination="@id/storiesFragmentList"
+
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/storiesFragmentList"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.stories.StoriesFragmentList"
+        android:label="StoriesFragmentList"
+        tools:layout="@layout/fragment_stories_game_home_list"
+        >
+        <action
+            android:id="@+id/action_storiesFragmentList_to_storiesDetailsFragmentGameHome"
+            app:destination="@id/storiesDetailsFragmentGameHome"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/storiesDetailsFragmentGameHome"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.stories.StoriesDetailsFragmentGameHome"
+        android:label="StoriesDetailsFragmentGameHome"
+        tools:layout="@layout/fragment_stories_detail"
+        >
+        <argument app:argType="com.farad.entertainment.kidsanimalenglish.data.model.DataStoriesGameHomeModel"
+            android:name="dataStoreis"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.gameHome.setting.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting"
+        />
+
+    <fragment
+        android:id="@+id/YouTubeVideoPlayerFragment"
+        android:name="com.farad.entertainment.kidsanimalenglish.ui.fragment.youtube.YouTubeVideoPlayerFragment"
+        android:label="YouTubeVideoPlayerFragment"
+        tools:layout="@layout/fragment_you_tube_video_player">
+        <argument
+            android:name="dataVideo"
+            app:argType="com.farad.entertainment.kidsanimalenglish.data.model.VideoPlayerModel" />
+    </fragment>
+
+</navigation>

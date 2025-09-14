@@ -1,0 +1,144 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.devtools.ksp'
+
+}
+
+android {
+    signingConfigs {
+
+        relase {
+            storeFile file('C:\\Users\\sina\\Desktop\\tainment98.jks')
+            keyPassword '104202300'
+            storePassword '104202300'
+            keyAlias 'tainment98'
+        }
+    }
+    namespace 'com.farad.entertainment.kidsanimalenglish'
+    compileSdk 35
+
+
+    defaultConfig {
+        applicationId "com.farad.entertainment.kids_ringtone"
+        minSdk 23
+        targetSdk 35
+        versionCode 31
+        versionName "3.1"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+        signingConfig signingConfigs.relase
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+
+
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.15.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.7'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'androidx.preference:preference-ktx:1.2.1'
+
+    implementation "androidx.room:room-runtime:2.6.1"
+    implementation "androidx.room:room-ktx:2.6.1"
+    implementation "androidx.navigation:navigation-ui-ktx:2.8.6"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.8.6"
+
+    implementation 'com.google.firebase:firebase-analytics:23.0.0'
+    implementation(platform('com.google.firebase:firebase-bom:34.0.0'))
+    implementation 'com.google.firebase:firebase-crashlytics:20.0.0'
+    implementation("com.google.firebase:firebase-analytics")
+    implementation 'com.google.android.gms:play-services-ads:24.5.0'
+
+
+    ksp("androidx.room:room-compiler:2.6.1")
+
+    implementation("androidx.media3:media3-exoplayer:1.5.1")
+    implementation("androidx.media3:media3-exoplayer-dash:1.5.1")
+    implementation("androidx.media3:media3-ui:1.5.1")
+
+
+    implementation('io.coil-kt:coil-compose:2.7.0')
+
+    //    font size dynammically
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'io.insert-koin:koin-android:4.0.0'
+
+    implementation 'me.relex:circleindicator:2.1.6'
+    implementation 'com.google.code.gson:gson:2.11.0'
+//    implementation("io.coil-kt:coil-gif:2.5.0")
+    implementation 'com.github.QuadFlask:colorpicker:0.0.15'
+
+    implementation "com.guolindev.permissionx:permissionx:1.8.1"
+    implementation files('libs/universal-image-loader-1.9.4.jar')
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+ //   implementation("io.coil-kt:coil-video:2.5.0")
+
+   implementation 'com.airbnb.android:lottie:6.6.0'
+
+
+//Animation star
+
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+//
+   // implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // phone_kids
+
+    implementation 'com.github.amitshekhariitbhu:Fast-Android-Networking:1.0.4'
+
+
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+
+    implementation 'com.github.sparrow007:carouselrecyclerview:1.2.6'
+
+
+// Google Play Billing Library
+  //  implementation 'com.android.billingclient:billing:7.0.0'
+
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.28'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:custom-ui:12.0.0'
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+    implementation 'com.github.yuyakaido:cardstackview:2.3.4'
+
+}

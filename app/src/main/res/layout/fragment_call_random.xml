@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backKidPhon">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageBig"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="9"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5.5"
+            android:layout_marginLeft="@dimen/_60sdp"
+            android:layout_marginRight="@dimen/_60sdp"
+            android:layout_marginBottom="50dp"
+
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/kids_phone_ringing"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPhoneKidsRingPic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/p_1"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                />
+        </FrameLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="66dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgPhoneKidsMultiArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/kids_phone_multi_arrow"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnAnswerCall"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_alignParentStart="true"
+            app:layout_constraintStart_toStartOf="parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/kids_phone_answer" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnReject"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/kids_phone_reject" />
+
+        <com.farad.entertainment.kidsanimalenglish.cv.movingbutton.MovingButton
+            android:id="@+id/moving_button"
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/kids_phone_call"
+            app:mb_move_direction="horizontal"
+            app:mb_movement_left="40dp"
+            app:mb_movement_right="40dp"
+            app:layout_constraintEnd_toStartOf="@id/btnReject"
+            app:layout_constraintStart_toEndOf="@id/btnAnswerCall"
+            app:layout_constraintTop_toTopOf="@+id/btnAnswerCall"
+            app:layout_constraintBottom_toBottomOf="@id/btnAnswerCall"
+            app:mb_offset_inner="16dp"
+            app:mb_offset_outer="23dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

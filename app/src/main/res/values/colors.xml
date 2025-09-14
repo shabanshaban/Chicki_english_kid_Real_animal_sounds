@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="black3">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorSplash">#ffe0a0</color>
+    <color name="toolbarMainFragment">#e54d0e</color>
+    <color name="backMain">#fafafa</color>
+    <color name="red_text">#eb383b</color>
+    <color name="purple_text">#9728de</color>
+    <color name="orange_text">#ff7f00</color>
+    <color name="pink">#F7C9D9</color>
+    <color name="pinkDark">#f95f7e</color>
+    <color name="backgroundColorFragment">#f4f5f6</color>
+    <color name="error">#FF4D4F</color>
+    <color name="warning">#FAAD14</color>
+    <color name="green_color_picker">#37B348</color>
+    <color name="orange_color_picker">#FF9F06</color>
+
+    <!--toolsAnimal-->
+    <color name="tools_kindergarten">#ff4539</color>
+    <color name="tools_video">#00bff3</color>
+    <color name="tools_big_image">#09f109</color>
+    <color name="tools_voice">#ffd700</color>
+    <color name="tools_paint">#0ceded</color>
+    <color name="tools_puzzle">#ff9016</color>
+    <color name="tools_about">#fa7fb6</color>
+    <color name="tools_gallery">#ea1392</color>
+    <color name="gray">#828282</color>
+    <color name="color_success">#52C41A</color>
+    <color name="primary">#FF6E86</color>
+    <color name="back_main_origami">#fcf7db</color>
+    <color name="back_main_statue">#f3f1d7</color>
+    <color name="back_main_story">#b1b1ff</color>
+    <color name="back_main_hand_print">#D4EBF6</color>
+    <color name="back_main_draw">#FDE1EF</color>
+    <color name="back_main_creativity">#F4F8C8</color>
+    <!--toolsAnimal-->
+    <color name="yellow_color_picker">#FFE576</color>
+    <color name="chose1">#FF9800</color>
+    <color name="chose2">#F44336</color>
+    <color name="txt_condition_educate">#009f3c</color>
+    <color name="background_page">#F2F2F2</color>
+    <color name="bg_animal_quize">#fff1dc</color>
+    <color name="backColoring">#FFFFFF</color>
+    <color name="cremi">#FFEFD5</color>
+
+    <color name="backKidPhon">#f9e369</color>
+    <color name="main_color">#FF9800</color>
+    <color name="textColorDialogFinishMemoryGame">#003663</color>
+    <color name="color_bottom">#ebebeb</color>
+    <color name="color_backDialog">#fff1dc</color>
+    <color name="orange_dark">#F57C00</color>
+    <color name="orange_light">#EDAD4E</color>
+    <color name="color_unlock">#4fb95c</color>
+    <color name="color_link">#3F51B5</color>
+    <color name="black2">#565656</color>
+    <color name="color_kerm">#ffdca8</color>
+    <color name="color_background">#f4f5f6</color>
+    <color name="orange_new">#ff9801</color>
+
+    <color name="colorGradientStart">#2DFF5722</color>
+    <color name="colorGradientCenter">#22E6AE06</color>
+    <color name="colorGradientEnd">#6B06D8F3</color>
+</resources>

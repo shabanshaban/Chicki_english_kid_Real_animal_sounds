@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bg_header" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="8dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageToolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_settings2" />
+
+        <RadioGroup
+            android:id="@+id/radioSound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape_shadow_ori_9"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageToolbar">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/btnNameAndSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/gothic_b"
+                android:text="@string/name_and_sound"
+                android:textColor="@color/black"
+                app:buttonTint="@color/orange_text"
+                android:textSize="11sp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/btnNameFrance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothic_b"
+                app:buttonTint="@color/orange_text"
+                android:text="@string/name_france"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/btnNameEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothic_b"
+                android:text="@string/name_english"
+                app:buttonTint="@color/orange_text"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioImageAnimated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_shadow_ori_9"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioSound">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/btnAnimated"
+                android:layout_width="wrap_content"
+                app:buttonTint="@color/orange_text"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/gothic_b"
+                android:text="@string/image_animated_first_page"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/btnReal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/orange_text"
+                android:fontFamily="@font/gothic_b"
+                android:text="@string/on_the_first_page_the_images_are_real"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioImageBig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_shadow_ori_9"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioImageAnimated">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/btnImageBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:buttonTint="@color/orange_text"
+                android:fontFamily="@font/gothic_b"
+                android:text="@string/after_clicking_the_photo_will_be_zoom_in"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/btnDoNotImageZoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothic_b"
+                android:text="@string/do_not_zoom_the_photo_after_clicking"
+                android:textColor="@color/black"
+                app:buttonTint="@color/orange_text"
+                android:textSize="11sp" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+

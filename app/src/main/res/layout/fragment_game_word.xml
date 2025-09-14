@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:srcCompat="@drawable/bg_word_game"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_ques"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_26sdp"
+
+        android:gravity="center"
+        android:shadowColor="@color/white"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="8"
+        android:text="@string/guess_the_name_of_the_creature"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_26sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_ques"
+        android:layout_centerHorizontal="true"
+        android:letterSpacing="0.1"
+        android:layout_margin="6dp"
+        android:background="@drawable/white_trans_round_bg"
+
+        android:gravity="center"
+        android:padding="@dimen/_6sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_22sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ques"
+        tools:text="Bitbar" />
+
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnDisplayLatter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_rounded_ripple_blue"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/display_a_letter"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnHelp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_rounded_ripple_yellow"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/help"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/btnDisplayLatter"
+        app:layout_constraintEnd_toStartOf="@+id/btnDisplayLatter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDisplayLatter" />
+
+
+    <RelativeLayout
+        android:id="@+id/rltDrawing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/frameResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:paddingEnd="36dp"
+        android:paddingStart="36dp"
+        android:background="#8B222222">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_rawRes="@raw/anim_cele_3"
+            app:lottie_autoPlay="true"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnNextLevel"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center|end"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/icon_next_scratch" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#B3000000">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnClose"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_align_right"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/width_of_the_brush"
+
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnClose"
+        app:layout_constraintTop_toTopOf="@+id/btnClose" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/width"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+
+        app:layout_constraintEnd_toEndOf="@+id/btnClose"
+        app:layout_constraintStart_toStartOf="@+id/btnClose"
+        app:layout_constraintTop_toBottomOf="@id/btnClose" />
+
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderBrush"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="4dp"
+        android:valueFrom="10"
+        android:valueTo="100"
+        app:layout_constraintStart_toEndOf="@+id/appCompatTextView"
+        app:layout_constraintTop_toBottomOf="@+id/txt_align_right">
+
+    </com.google.android.material.slider.Slider>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/header" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/guess_t_5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/imageHeader"
+            app:layout_constraintEnd_toEndOf="@+id/imageHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageHeader" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageHeader">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/animalSound"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+
+                android:textColor="@color/orange_text"
+                app:buttonTint="@color/orange_text"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bg_border_2"
+                android:textSize="@dimen/_10sdp"
+                android:checked="true"
+                 android:padding="8dp"
+                android:text="@string/animal_sound" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/englishName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/bg_border_2"
+                android:padding="8dp"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginRight="16dp"
+
+                android:textColor="@color/orange_text"
+                app:buttonTint="@color/orange_text"
+                android:text="@string/english_name" />
+
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageRepeat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:srcCompat="@drawable/repeat_exam_icon" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lnrPic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            app:layout_constraintTop_toBottomOf="@id/imageRepeat">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgAnswer1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/p_2"
+                    app:shapeAppearance="@style/RoundedImageView_12dp" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgAnswer2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/p_2"
+                    app:shapeAppearance="@style/RoundedImageView_12dp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgAnswer3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/p_2"
+                    app:shapeAppearance="@style/RoundedImageView_12dp" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgAnswer4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/p_2"
+                    app:shapeAppearance="@style/RoundedImageView_12dp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="@color/green_color_picker"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lnrPic" />
+
+
+        <FrameLayout
+            android:id="@+id/frameImageAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#75222222"
+            android:visibility="invisible"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgPic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                app:shapeAppearance="@style/RoundedImageView_top_8dp"
+                android:src="@drawable/p_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageRepeat" />
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <com.farad.entertainment.kidsanimalenglish.cv.MyTrackSelectionView
+        android:id="@+id/exo_my_track_selection_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+</androidx.core.widget.NestedScrollView>

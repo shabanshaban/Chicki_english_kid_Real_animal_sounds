@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linRootVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_75sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@drawable/shape_dash_black_rounded_light_yellow"
+            android:gravity="center"
+            android:lines="2"
+            android:padding="@dimen/_8sdp"
+
+            android:text="@string/thank_you_in_advance_for_respecting"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/main_media_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@id/btnSubscribed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lineToolbar"
+            >
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtubePlayerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+           <!-- <FrameLayout
+                android:id="@+id/layoutLock"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:translationZ="10dp"
+                android:background="@drawable/gradint"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/lock"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    />
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:lottie_rawRes="@raw/c"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    />
+            </FrameLayout>-->
+
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lineToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_72sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bg_header" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnSetting"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_setting"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgHeaderRight"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="16dp"
+                android:adjustViewBounds="true"
+
+                android:paddingBottom="@dimen/_8sdp"
+                android:src="@drawable/icon_video"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgHeaderLeft"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:adjustViewBounds="true"
+                android:paddingBottom="@dimen/_8sdp"
+                android:src="@drawable/icon_video"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHeaderLeft"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:gravity="start|center_vertical"
+                android:singleLine="false"
+                android:text="@string/video"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtHeaderRight"
+                app:layout_constraintEnd_toStartOf="@+id/txtHeaderRight"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgHeaderLeft"
+                app:layout_constraintTop_toTopOf="@+id/txtHeaderRight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHeaderRight"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:gravity="center_vertical|end"
+                android:singleLine="false"
+                android:text="@string/video"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgHeaderLeft"
+                app:layout_constraintEnd_toStartOf="@+id/imgHeaderRight"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txtHeaderLeft"
+                app:layout_constraintTop_toTopOf="@+id/imgHeaderLeft" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@id/lineWhatsapp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.farad.entertainment.kidsanimalenglish.cv.WhatsappIntent
+            android:id="@+id/lineWhatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:visibility="gone"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubscribed"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            app:iconTint="@color/red_text"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="bottom|center"
+            android:text="@string/subscribed"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            android:paddingRight="16dp"
+            app:icon="@drawable/baseline_notifications_24"
+            android:paddingLeft="16dp"
+            app:cornerRadius="16dp"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/green_color_picker"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fullScreenContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

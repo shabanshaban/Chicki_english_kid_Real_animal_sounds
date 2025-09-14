@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginBottom="16dp"
+    android:clickable="true"
+    android:elevation="1dp"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="1dp"
+    app:rippleColor="@color/orange_new"
+    tools:ignore="UnusedAttribute">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemAnimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameEnglishAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="@+id/tvNameFrenchAnimal"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/english_1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameFrenchAnimal"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black3"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            app:fontFamily="@font/vazir"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNameEnglishAnimal"
+            tools:text="sdadsad" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnMusic"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvNameFrenchAnimal"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameFrenchAnimal"
+            app:srcCompat="@drawable/has_music_icon" />
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_back_animal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageAnimal"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="@id/frameLayout"
+            app:layout_constraintEnd_toEndOf="@id/frameLayout"
+            app:layout_constraintTop_toTopOf="@id/frameLayout"
+            app:shapeAppearance="@style/customRoundedImageView"
+            tools:srcCompat="@drawable/p_1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--<FrameLayout
+        android:id="@+id/layoutLock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradint"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/lock"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:lottie_rawRes="@raw/c"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_speed="0.5"
+            app:lottie_repeatMode="reverse"
+            />
+    </FrameLayout>-->
+</com.google.android.material.card.MaterialCardView>
+

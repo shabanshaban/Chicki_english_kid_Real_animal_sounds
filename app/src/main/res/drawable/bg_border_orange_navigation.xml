@@ -1,0 +1,16 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+    <!-- This is the stroke you want to define -->
+    <gradient
+        android:startColor="@color/backMain"
+        android:angle="90"
+        android:centerColor="@color/backMain"
+        android:endColor="@color/backMain" />
+
+    <!-- Optional, round your corners -->
+    <corners
+        android:topRightRadius="@dimen/_26sdp"
+        android:bottomRightRadius="@dimen/_26sdp"
+        />
+
+</shape>

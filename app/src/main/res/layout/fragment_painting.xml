@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColoring"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lineToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_72sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bg_header" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnUndo"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:src="@drawable/ic_undo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnRedo"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnUndo"
+            app:layout_constraintStart_toEndOf="@id/btnUndo"
+            app:layout_constraintTop_toTopOf="@id/btnUndo"
+            app:srcCompat="@drawable/ic_redo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnSave"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            app:srcCompat="@drawable/ic_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPalletColor"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSave"
+            app:layout_constraintEnd_toStartOf="@+id/btnSave"
+            app:layout_constraintTop_toTopOf="@+id/btnSave"
+            app:srcCompat="@drawable/icon_pallete" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBrush"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnRedo"
+            android:paddingBottom="@dimen/_8sdp"
+            app:layout_constraintEnd_toStartOf="@+id/btnPalletColor"
+            app:layout_constraintStart_toEndOf="@+id/btnRedo"
+            app:layout_constraintTop_toTopOf="@+id/btnRedo"
+            app:srcCompat="@drawable/brush_size_icon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView4"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/paper4" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPenBlack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:tag="#242222"
+            android:layout_marginBottom="-50dp"
+            app:srcCompat="@drawable/black_pencil"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPenBlue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:tag="#35A3F1"
+            android:layout_marginBottom="-50dp"
+            app:srcCompat="@drawable/pencil_blue"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPenPurple"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:tag="#BA05BA"
+            android:layout_marginBottom="-50dp"
+            app:srcCompat="@drawable/purple_pencil"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPenGreen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:tag="#37B348"
+            android:layout_marginBottom="-50dp"
+            app:srcCompat="@drawable/green_pencil"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPenBrown"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="-50dp"
+            android:tag="#865B3A"
+            app:srcCompat="@drawable/brown_pencil"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPenPink"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="-50dp"
+            android:tag="#FD008A"
+            app:srcCompat="@drawable/pink_pencil"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPenRed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="-50dp"
+            android:tag="#FF0000"
+            app:srcCompat="@drawable/red_pencil"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPenOrange"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:tag="#FF9F06"
+            android:layout_marginBottom="-50dp"
+            app:srcCompat="@drawable/orange_pencil"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPenYellow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:tag="#FFE576"
+            android:layout_marginBottom="-50dp"
+            app:srcCompat="@drawable/yellow_pencil"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPenEraser"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:tag="eraser"
+            android:layout_marginBottom="-50dp"
+            app:srcCompat="@drawable/eraser"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/drawing"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_weight="10"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatImageView4"
+        app:layout_constraintTop_toBottomOf="@+id/lineToolbar">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
