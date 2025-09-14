@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.Window
 import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
 import com.farad.entertainment.kidsanimalenglish.base.navigation.base.BaseNavigator
@@ -40,7 +42,19 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), ViewCreated
 
 
     abstract fun getBindingView(): VB
-
+    fun  setupApplyWindowInsetsListener() {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content)) { view, insets ->
+            val imeInsets = insets.getInsets(WindowInsetsCompat.Type.ime())
+            val systemBarsInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.setPadding(
+                systemBarsInsets.left,
+                systemBarsInsets.top,
+                systemBarsInsets.right,
+                maxOf(systemBarsInsets.bottom, imeInsets.bottom)
+            )
+            WindowInsetsCompat.CONSUMED
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         requestWindowFeature(Window.FEATURE_ACTION_BAR)
         beforeCreateView()
@@ -51,6 +65,7 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), ViewCreated
         binding = getBindingView()
 
         setContentView(binding.root)
+        setupApplyWindowInsetsListener()
         supportActionBar?.hide()
         applicationContext.setLocaleApp( )
         initProgressManager()
