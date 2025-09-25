@@ -125,7 +125,7 @@ class MainFragmentRingTone : BottomNavigationFragment<FragmentMainSoundBinding>(
 
                 countClickItem++
 
-                if (countClickItem >= 7 && serRequest.not()) {
+                if (countClickItem >= 15 && serRequest.not()) {
                     getMainActivity()?.showBannerFull {
                         serRequest = false
                     }

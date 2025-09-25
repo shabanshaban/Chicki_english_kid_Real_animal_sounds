@@ -491,7 +491,7 @@ class MainFragment : BottomNavigationFragment<FragmentMainBinding>() {
 
     private fun checkBannerFull() {
 
-        if (counterImageClick >= 7 && serRequest.not()) {
+        if (counterImageClick >= 15 && serRequest.not()) {
             counterImageClick = 0
             serRequest = true
             getMainActivity()?.showBannerFull {
